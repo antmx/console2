@@ -1,0 +1,64 @@
+﻿#console-window {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 16px;
+    z-index: 100000;
+}
+
+    #console-window.visible {
+        display: block;
+    }
+
+    #console-window.expanded {
+        background-color: lightgray;
+    }
+
+    #console-window #io-area {
+        display: none;
+    }
+
+        #console-window #io-area.expanded {
+            display: block;
+            border-top: solid 1px #777;
+            padding: 4px 0;
+            margin-top: 4px;
+        }
+
+    #console-window #output-area {
+        height: 100px;
+        overflow: scroll;
+    }
+
+        #console-window #output-area ul {
+            color: #777;
+            list-style: none;
+            margin-left:0;
+            padding-left:0;
+        }
+
+            #console-window #output-area ul li:before {
+                content: "\2023  ";
+            }
+
+            #console-window #output-area ul li.error {
+                color: #f00;
+            }
+
+    #console-window #command-input {
+        background-color: #000;
+        color: #0f0;
+        font-family: Consolas, serif;
+        width: 100%;
+    }
+
+    #console-window #clear-button {
+        display: none;
+    }
+
+    #console-window.expanded #clear-button {
+        display: inline-block;
+    }
